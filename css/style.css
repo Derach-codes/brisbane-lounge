@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 0px 80px;
+    font-family: sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    background: url("../img/hero.png") center center/cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            #000 0%,
+            rgba(0, 0, 0, .88) 18%,
+            rgba(0, 0, 0, .65) 42%,
+            rgba(0, 0, 0, .35) 65%,
+            rgba(0, 0, 0, .08) 88%,
+            transparent 100%);
+}
+
+.hero-content {
+    color: white;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Cardo", serif;
+}
+
+.hero-content h1 {
+    letter-spacing: 30px;
+    font-size: 100px;
+}
+
+.hero-content h3 {
+    font-family: sans-serif;
+    letter-spacing: 15px;
+    font-size: 30px;
+}
+
+.hero-section p {
+    max-width: 500px;
+    word-spacing: 1px;
+    color: rgb(228, 226, 226);
+}
+
+/* room */
+.room-container {
+    padding-top: 100px;
+}
+
+.room-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(82, 82, 82);
+    word-spacing: 7px;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    gap: 30px;
+}
+
+.room-img img {
+    width: 100%;
+    height: 260px;
+    /* choose a height you like */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.room-img {
+    margin-bottom: 20px;
+}
+
+.room-txt h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: rgb(82, 82, 82);
+}
+
+.room-txt p {
+    margin-bottom: 20px;
+    color: rgb(82, 82, 82);
+}
+
+.room-txt a {
+    text-decoration: none;
+    background-color: rgb(190, 54, 4);
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    font-size: 13px;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.room-txt a:hover {
+    background-color: rgb(117, 61, 190);
+    transition: all 0.2s ease;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .25);
+    transform: translateY(1px);
+}
+
+.room-card {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-txt {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* why */
+
+.why-section {
+    position: relative;
+    background: url("../img/why.png") center center/cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.why-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            #000 0%,
+            rgba(0, 0, 0, .88) 18%,
+            rgba(0, 0, 0, .65) 42%,
+            rgba(0, 0, 0, .35) 65%,
+            rgba(0, 0, 0, .08) 88%,
+            transparent 100%);
+}
+
+.feature-icon {
+    color: #c8a96a;
+    width: 25px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.why-content {
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+.why-content h2 {
+    font-size: 40px;
+    word-spacing: 7px;
+    letter-spacing: 7px;
+    margin-bottom: 20px;
+}
+
+.why-content p {
+    line-height: 3;
+    margin-left: 25px;
+    letter-spacing: 2px;
+}
+
+/* park */
+.park-section {
+    position: relative;
+    background: url("../img/parklot.png") center center/cover no-repeat;
+    margin-bottom: 50px;
+
+}
+
+.park-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+}
+
+.park-content {
+    position: relative;
+    color: rgb(200, 199, 199);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 80px;
+    min-height: 80vh;
+}
+
+.ready {
+    width: 40%;
+    margin-left: auto;
+    text-align: right;
+}
+
+.ready h2,
+.contact h2 {
+    font-size: 30px;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    line-height: 1.7;
+    margin-left: 25px;
+    letter-spacing: 2px;
+}
+
+/* footer */
+.footer {
+    background-color: black;
+    padding: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: rgb(200, 199, 199);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 0px 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .hero-section {
+        min-height: 60vh;
+    }
+
+    .hero-content {
+        gap: 6px;
+        /* align-items: center; */
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+        letter-spacing: 6px;
+    }
+
+    .hero-content h3 {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+
+    .hero-section p {
+        max-width: 100%;
+        line-height: 1.6;
+    }
+
+    .room-container {
+        padding-top: 50px;
+    }
+
+    .room-container h2 {
+        font-size: 24px;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .room-txt h3 {
+        font-size: 18px;
+    }
+
+    .room-txt p {
+        font-size: 13px;
+    }
+
+    .room-img img {
+        height: 220px;
+    }
+
+    .why-section {
+        min-height: 60vh;
+    }
+
+    .why-content h2 {
+        font-size: 24px;
+    }
+
+    /* .why-section {
+        display: flex;
+        justify-content: center;
+    } */
+
+
+
+    .park-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 70px 0px;
+        min-height: 40vh;
+        text-align: center;
+    }
+
+    .ready,
+    .contact {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .footer-container a {
+        font-size: 13px;
+    }
+}
