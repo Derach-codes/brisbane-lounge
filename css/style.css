@@ -389,11 +389,28 @@ section {
     border-color: #c9a227;
 }
 
+
 .form-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 20px;
+    width: 100%;
+    min-width: 0;
 }
+
+.form-row .form-group {
+    min-width: 0;
+    width: 100%;
+}
+
+.form-row input[type="date"] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 
 .booking-btn {
     border: none;
