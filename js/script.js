@@ -57,3 +57,29 @@ checkInInput.addEventListener("change", function () {
     checkOutInput.value = "";
   }
 });
+
+
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+
+navToggle.addEventListener("click", function () {
+    const menuIsOpen = navLinks.classList.toggle("active");
+
+    navToggle.setAttribute("aria-expanded", menuIsOpen);
+    navToggle.setAttribute(
+        "aria-label",
+        menuIsOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+    navToggle.textContent = menuIsOpen ? "✕" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Open navigation menu");
+        navToggle.textContent = "☰";
+    });
+});
+

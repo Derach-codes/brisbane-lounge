@@ -62,6 +62,24 @@
     background: #a88418;
 }
 
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.nav-links .nav-book-btn {
+    display: inline-block;
+}
+
+
 section {
     padding: 0px 80px;
     font-family: sans-serif;
@@ -334,7 +352,7 @@ section {
     margin-bottom: 15px;
 }
 
-.booking-heading > p:last-child {
+.booking-heading>p:last-child {
     max-width: 600px;
     margin: 0 auto;
     color: #666;
@@ -396,10 +414,60 @@ section {
     margin: 0;
 }
 
+
 @media (max-width: 768px) {
     section {
-        padding: 0px 20px;
+        padding: 0 20px;
     }
+
+
+    .nav-container {
+        width: 92%;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        width: 190px;
+        padding: 16px;
+        background: #3f2b20;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        z-index: 1001;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 8px;
+        font-size: 15px;
+    }
+
+    .nav-links .nav-book-btn {
+        margin-top: 8px;
+        text-align: center;
+    }
+
 
     h3 {
         font-size: 18px;
@@ -415,22 +483,23 @@ section {
 
     .hero-section {
         min-height: 60vh;
+        background-position: center;
     }
 
     .hero-content {
         gap: 6px;
-        /* align-items: center; */
         text-align: center;
+        padding: 0 10px;
     }
 
     .hero-content h1 {
-        font-size: 42px;
-        letter-spacing: 6px;
+        font-size: clamp(28px, 8vw, 42px);
+        letter-spacing: 4px;
     }
 
     .hero-content h3 {
-        font-size: 18px;
-        letter-spacing: 4px;
+        font-size: 16px;
+        letter-spacing: 3px;
     }
 
     .hero-section p {
@@ -459,7 +528,9 @@ section {
     }
 
     .room-img img {
+        width: 100%;
         height: 220px;
+        object-fit: cover;
     }
 
     .why-section {
@@ -470,18 +541,11 @@ section {
         font-size: 24px;
     }
 
-    /* .why-section {
-        display: flex;
-        justify-content: center;
-    } */
-
-
-
     .park-content {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding: 70px 0px;
+        padding: 70px 0;
         min-height: 40vh;
         text-align: center;
     }
@@ -489,16 +553,14 @@ section {
     .ready,
     .contact {
         width: 80%;
-        margin: auto;
+        margin: 0 auto 40px;
         text-align: center;
-        margin-bottom: 40px;
     }
 
     .footer-container a {
         font-size: 13px;
     }
 
-    /* form */
     .booking-section {
         padding: 70px 20px;
     }
@@ -514,6 +576,4 @@ section {
     .form-row {
         grid-template-columns: 1fr;
     }
-
-    
 }
