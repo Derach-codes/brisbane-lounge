@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Brisbane Lounge & Suite | Luxury Hotel</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,25 @@
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="#" class="logo">Brisbane</a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a href="#booking" class="nav-book-btn">Book Now</a>
+
+        </div>
+    </nav>
     <!--hero-section -->
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <div class="hero-content">
             <h1>BRISBANE</h1>
             <h3>LOUNGE & SUITE</h3>
@@ -23,7 +40,7 @@
     </section>
 
     <!-- our room -->
-    <section>
+    <section id="rooms">
         <div class="room-container">
             <h2>Our Rooms & Suite</h2>
             <div class="room-grid">
@@ -32,7 +49,7 @@
                     <div class="room-txt">
                         <h3>Basic Room</h3>
                         <p>Comfortable and affordable.</p>
-                        <a href="">Reserve Now</a>
+                        <a href="#booking" class="reserve-btn" data-room="Basic Room">Reserve Now</a>
                     </div>
                 </div>
                 <div class="room-card">
@@ -40,7 +57,7 @@
                     <div class="room-txt">
                         <h3>Deluxe Room</h3>
                         <p>More space with premium amenities.</p>
-                        <a href="">Reserve Now</a>
+                        <a href="#booking" class="reserve-btn" data-room="Deluxe Room">Reserve Now</a>
                     </div>
                 </div>
                 <div class="room-card">
@@ -48,7 +65,7 @@
                     <div class="room-txt">
                         <h3>Exclusive Room</h3>
                         <p>Spacecious accommodation with the best experience</p>
-                        <a href="">Reserve Now</a>
+                        <a href="#booking" class="reserve-btn" data-room="Exclusive Room">Reserve Now</a>
                     </div>
                 </div>
                 <div class="room-card">
@@ -57,7 +74,7 @@
                         <h3>Presidential Suite</h3>
                         <p>Experience unmatched luxury with elegant interiors, exclusive amenities, and world-class
                             comfort.</p>
-                        <a href="">Reserve Now</a>
+                        <a href="#booking" class="reserve-btn" data-room="Presidential Suite">Reserve Now</a>
                     </div>
                 </div>
             </div>
@@ -65,7 +82,7 @@
     </section>
 
     <!-- why choose -->
-    <section class="why-section">
+    <section class="why-section" id="about">
         <div class="why-content">
             <h2>Why Choose Brisbane</h2>
             <p><i class="fa-solid fa-bolt feature-icon"></i> 24/7 Power</p>
@@ -78,7 +95,7 @@
     </section>
 
     <!-- park -->
-    <section class="park-section">
+    <section class="park-section" id="contact">
         <div class="park-content">
             <div class="ready">
                 <h2>Ready To Stay With Us?</h2>
@@ -94,6 +111,73 @@
         </div>
     </section>
 
+    <!-- book now -->
+    <!-- booking section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-container">
+
+            <div class="booking-heading">
+                <p class="booking-subtitle">RESERVATION</p>
+                <h2>Book Your Stay</h2>
+                <p>
+                    Reserve your room at Brisbane Lounge & Suite
+                    and enjoy comfort, elegance and exceptional hospitality.
+                </p>
+            </div>
+
+            <form class="booking-form" id="bookingForm">
+
+                <div class="form-group">
+                    <label for="guestName">Full Name</label>
+                    <input type="text" id="guestName" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="guestEmail">Email Address</label>
+                    <input type="email" id="guestEmail" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="roomType">Room Type</label>
+                    <select id="roomType">
+                        <option value="">Select a room</option>
+                        <option value="Basic Room">Basic Room</option>
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="Exclusive Room">Exclusive Room</option>
+                        <option value="Presidential Suite">Presidential Suite</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="checkIn">Check-in</label>
+                        <input type="date" id="checkIn">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkOut">Check-out</label>
+                        <input type="date" id="checkOut">
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" min="1" placeholder="Number of guests">
+                </div>
+
+                <button type="submit" class="booking-btn">
+                    Request Reservation
+                </button>
+
+                <p id="bookingMessage"></p>
+
+            </form>
+
+        </div>
+    </section>
+
     <!-- footer -->
     <section class="footer">
         <div class="footer-container">
@@ -102,6 +186,8 @@
             <a href="">Terms & Condition</a>
         </div>
     </section>
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
